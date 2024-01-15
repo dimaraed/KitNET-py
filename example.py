@@ -22,7 +22,7 @@ with zipfile.ZipFile("dataset.zip","r") as zip_ref:
     zip_ref.extractall()
 
 print("Reading Sample dataset...")
-X = pd.read_csv("mirai3.csv",header=None).as_matrix() #an m-by-n dataset with m observations
+X = pd.read_csv("mirai3.csv",header=None).values #an m-by-n dataset with m observations
 
 # KitNET params:
 maxAE = 10 #maximum size for any autoencoder in the ensemble layer
